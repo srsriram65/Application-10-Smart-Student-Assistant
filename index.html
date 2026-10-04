@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Smart Student Assistant</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- Header -->
+    <header class="header">
+
+        <div class="bot-icon">🤖</div>
+
+        <div>
+            <h1>Smart Student Assistant</h1>
+            <p>Your personal study companion</p>
+        </div>
+
+        <button id="themeBtn" onclick="toggleTheme()">🌙</button>
+
+    </header>
+
+
+    <!-- Quick Actions -->
+
+    <div class="quick-actions">
+
+        <button onclick="quickMessage('Give me study tips')">
+            📚 Study Tips
+        </button>
+
+        <button onclick="quickMessage('How should I prepare for exam')">
+            📝 Exam Help
+        </button>
+
+        <button onclick="quickMessage('Give me Java tips')">
+            💻 Coding
+        </button>
+
+        <button onclick="quickMessage('Create a study plan')">
+            ⏰ Study Plan
+        </button>
+
+    </div>
+
+
+    <!-- Chat Area -->
+
+    <main class="chat-card">
+
+        <div id="chatBox">
+
+            <div class="message bot-message">
+
+                <div class="avatar">🤖</div>
+
+                <div class="bubble">
+                    <strong>Student Assistant</strong>
+                    <p>
+                        Hi! 👋 I'm your Smart Student Assistant.
+                        Ask me about studying, exams, programming,
+                        time management or motivation.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Typing Indicator -->
+
+        <div id="typing" class="typing">
+            🤖 Assistant is thinking...
+        </div>
+
+
+        <!-- Input Area -->
+
+        <div class="input-area">
+
+            <button class="voice-btn"
+                    onclick="startVoice()">
+                🎤
+            </button>
+
+            <input
+                type="text"
+                id="userInput"
+                placeholder="Ask something..."
+                onkeydown="handleEnter(event)"
+            >
+
+            <button class="send-btn"
+                    onclick="sendMessage()">
+                ➤
+            </button>
+
+        </div>
+
+
+        <!-- Bottom Controls -->
+
+        <div class="bottom-controls">
+
+            <button onclick="clearChat()">
+                🗑️ Clear Chat
+            </button>
+
+            <span id="messageCount">
+                Messages: 1
+            </span>
+
+        </div>
+
+    </main>
+
+
+    <!-- Features -->
+
+    <section class="features">
+
+        <h2>✨ What I Can Help With</h2>
+
+        <div class="feature-grid">
+
+            <div class="feature">
+                <span>📚</span>
+                <h3>Study</h3>
+                <p>Get simple study tips.</p>
+            </div>
+
+            <div class="feature">
+                <span>📝</span>
+                <h3>Exams</h3>
+                <p>Prepare effectively for exams.</p>
+            </div>
+
+            <div class="feature">
+                <span>💻</span>
+                <h3>Coding</h3>
+                <p>Learn programming concepts.</p>
+            </div>
+
+            <div class="feature">
+                <span>⏰</span>
+                <h3>Planning</h3>
+                <p>Create better study routines.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
